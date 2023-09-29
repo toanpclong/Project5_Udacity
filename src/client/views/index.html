@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="header">FEND Capstone - Travel App</h1>
+        <div id="input">
+            <div id="text">
+                <input type="text" id="place" placeholder="Place Input">
+                <input type="date" id="date">
+            </div>
+            <button id="button">Find</button>
+        </div>
+        <h3 id="result"></h3>
+        <main id="main">
+        </main>
+        <footer id="footer">Copyright Nguyen Phuc Toan Developer</footer>
+    </div>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
